@@ -1,0 +1,37 @@
+<h1>{{title}}</h1>
+<p>Welcome to {{title}}</p>
+<center>
+    <form>
+        <input type="text" name="query" id="query" value="furniture">
+        <input type="button" id="queryBtn" value="抓取">
+    </form>
+
+    <table id="table">
+        <thead>
+        <tr>
+            <th>序号</th>
+            <th>地址</th>
+            <th>标题</th>
+            <th>邮箱</th>
+        </tr>
+        </thead>
+        <tbody id="resultBody">
+
+        </tbody>
+    </table>
+</center>
+
+<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="/socket.io/socket.io.js"></script>
+<script src="/main.js"></script>
+
+<script type="text/html" id="user_tmpl">
+    <% for ( var i = 0; i < users.length; i++ ) { %>
+    <tr>
+        <td><a href="<%=users[i].url%>"><%=users[i].name%></a></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <% } %>
+</script>
